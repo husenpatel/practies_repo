@@ -1,0 +1,13 @@
+--- 
+- hosts: mywebserver
+  become: yes
+  tasks:  
+     - name: i wnat to install webserver on ubuntu node
+       apt: 
+         name: apache2
+         state: present 
+       when: ansible_os_family== "Debian"
+
+
+       
+        
